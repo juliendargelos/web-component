@@ -1,6 +1,6 @@
 {
   "name": "@juliendargelos/web-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Minimal class and decorators for typescript web components.",
   "author": "Julien Dargelos <contact@juliendargelos.com>",
   "license": "MIT",
