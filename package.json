@@ -16,7 +16,7 @@
   "scripts": {
     "build": "rollup -c",
     "test": "jest",
-    "release": "yarn pack && semantic-release"
+    "release": "semantic-release"
   },
   "devDependencies": {
     "@types/jest": "^24.0.13",
