@@ -1,6 +1,6 @@
 {
   "name": "@juliendargelos/web-component",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Minimal class and decorators for typescript web components.",
   "author": "Julien Dargelos <contact@juliendargelos.com>",
   "license": "MIT",
@@ -10,11 +10,12 @@
   "main": "dist/index.cjs.js",
   "module": "dist/index.mjs",
   "browser": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c && tsc --declaration --declarationMap --emitDeclarationOnly --outFile dist/index.d.ts",
     "test": "jest",
     "release": "semantic-release"
   },
