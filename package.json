@@ -1,6 +1,6 @@
 {
   "name": "@juliendargelos/web-component",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Minimal class and decorators for typescript web components.",
   "author": "Julien Dargelos <contact@juliendargelos.com>",
   "license": "MIT",
@@ -16,6 +16,7 @@
   ],
   "scripts": {
     "build": "rollup -c && tscpaths -p tsconfig.json -s src -o dist",
+    "lint": "eslint src/**/*",
     "test": "jest",
     "release": "semantic-release"
   },

@@ -1,6 +1,8 @@
 import { Component } from '~/component'
 
-export const define = (component: typeof Component): void => {
+export const define = <T extends Component = Component>(
+  component: { new(...args: any[]): T; tagName: string }
+): void => {
   customElements.define(component.tagName, component)
 }
 
@@ -44,10 +46,10 @@ export const fragment = (
   innerHTML: strings.reduce((out, string, i) => out + args[i - 1] + string)
 }).content
 
-export const template = (content: string) => (
-  <T extends Component = Component>(target: { new(): T }): void => {
-    target.prototype.template = fragment(
-      [content] as unknown as TemplateStringsArray
-    )
-  }
-)
+export const template = (content: string) => <T extends Component = Component>(
+  target: { new(...args: any[]): T }
+): void => {
+  target.prototype.template = fragment(
+    [content] as unknown as TemplateStringsArray
+  )
+}
