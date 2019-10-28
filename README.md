@@ -6,8 +6,6 @@
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@juliendargelos/web-component)](https://npmjs.com/@juliendargelos/web-component)
 [![GitHub](https://img.shields.io/github/license/juliendargelos/web-component?color=informational)](LICENSE)
 
-https://github.com/juliendargelos/web-component
-
 This package provides a minimal abstract class that can be extended to build web components. It comes with some useful decorators and is TypeScript friendly.
 
 ### Install
