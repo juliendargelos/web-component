@@ -15,7 +15,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "rollup -c && tsc --declaration --declarationMap --emitDeclarationOnly --outFile dist/index.d.ts",
+    "build": "rollup -c && tscpaths -p tsconfig.json -s src -o dist",
     "test": "jest",
     "release": "semantic-release"
   },
@@ -37,6 +37,7 @@
     "rollup-plugin-typescript2": "^0.21.0",
     "semantic-release": "^15.13.28",
     "ts-jest": "^24.0.2",
+    "tscpaths": "^0.0.9",
     "typescript": "3.5.1"
   }
 }
